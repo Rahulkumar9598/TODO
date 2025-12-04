@@ -104,38 +104,39 @@ function App() {
         }
     }, [items])
 
-    // useEffect(() => {
-    //     let tasks = localStorage.getItem("tasks")
-    //     tasks = JSON.parse(tasks)
-    //     if (tasks) {
-    //         setItems(tasks)
-    //     } else {
-    //         tasks = []
-    //         setItems(tasks)
-    //     }
-    // }, [])
+    useEffect(() => {
+        let tasks = localStorage.getItem("tasks")
+        tasks = JSON.parse(tasks)
+        if (tasks) {
+            setItems(tasks)
+        } else {
+            tasks = []
+            setItems(tasks)
+        }
+    }, [])
 
     return (
         <>
             {/* <Navbar /> */}
-            <form onSubmit={handleSubmit} className="  min-h-screen  px-5 p-40  mx-auto rounded-lg  w-full   bg-gradient-to-br from-[#dfe6ff] to-[#eadcff]
+            <form onSubmit={handleSubmit} className="  min-h-screen  px-5 p-0 pt-40 sm:p-30 md:p-30  mx-auto rounded-lg  w-full   bg-gradient-to-br from-[#dfe6ff] to-[#eadcff]
 ">
 
-                <div className='text-center font-bold py-5 w-[60%]  mx-auto  flex-wrap p-4 
+                <div className='text-center font-bold py-5 w-[94%] sm:w-[94%] md:w-[94%] lg:w-[90%] mx-auto  flex-wrap p-4 
                 bg-white/60 backdrop-blur-xl rounded-3xl shadow-lg border border-white/30
 '>
                     <h1 className='text-2xl class="text-gray-900" font-bold'>TODO LIST</h1>
                     <p className='text-sm class="text-gray-500" my-2'>Manage Your  todos at one on place</p>
                     <h2 className=' font-bold text-start mx-3'> Add Todo</h2>
-                    <div className='mt-5  flex justify-between flex-wrap'>
+                    <div className='mt-5  flex justify-between gap-3'>
                         <input onChange={(e) => setItem(e.target.value)}
                             type='text' name='task' value={item}
                             className='border border-gray-100 
                              bg-white rounded-2xl shadow-md p-1  w-3/4 flex h-10  text-sm justify-self-start'
                             placeholder='Add a new task'
                         />
-                        <div className='me-8'>
-                            <button className='bg-blue-600 hover:bg-blue-700 text-white text-sm  py-2 px-2 rounded ' type='Submit'>
+                        <div className='me-2'>
+                            <button className='bg-blue-600 hover:bg-blue-700 text-white text-[0.7rem] sm:text-[0.9rem] md:text-[1rem]  py-[0.6rem] px-[0.5rem]
+                             sm:py-[0.6rem] sm:px-[0.9rem] rounded-xl sm:rounded-xl  md:rounded-lg ' type='Submit'>
                                 Add Task
                             </button>
 
