@@ -121,7 +121,7 @@ function App() {
             <form onSubmit={handleSubmit} className="  min-h-screen  px-5 p-0 pt-40 sm:p-30 md:p-30  mx-auto rounded-lg  w-full   bg-gradient-to-br from-[#dfe6ff] to-[#eadcff]
 ">
 
-                <div className='text-center font-bold py-5 w-[94%] sm:w-[94%] md:w-[94%] lg:w-[90%] mx-auto  flex-wrap p-4 
+                <div className='text-center font-bold py-5 w-[94%] sm:w-[94%] md:w-[80%] lg:w-[80%] mx-auto  flex-wrap p-4 
                 bg-white/60 backdrop-blur-xl rounded-3xl shadow-lg border border-white/30
 '>
                     <h1 className='text-2xl class="text-gray-900" font-bold'>TODO LIST</h1>
